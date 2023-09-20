@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input_words</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <p>word1:<br>
+        <input type='text' class='form-control' name='word1'/>
+    </p>
+    <p>word2:<br>
+        <input type='text' class='form-control' name='word2'/>
+    </p>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
