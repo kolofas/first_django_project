@@ -37,6 +37,8 @@ def page_words_table(request):
 def postuser(request):
     if request.method == 'GET':
         return render(request, 'add_words.html')
+    elif request.method == 'POST' and len(request.POST['word1']) == 0 or len(request.POST['word2']) == 0:
+        return render(request, 'add_words.html')
     else:
         print(request.POST['word1'])
         print(request.POST['word2'])
